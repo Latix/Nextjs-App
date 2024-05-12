@@ -1,9 +1,8 @@
 "use client"
 
-import styles from "./navLink.module.css";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
-
+import styles from "./navLink.module.css";
 const NavLink = ({item}) => {
 
     const pathName = usePathname();

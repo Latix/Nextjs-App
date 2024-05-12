@@ -24,6 +24,10 @@ const links = [
     }
 ];
 
+const showLog = () => {
+    console.log('test');
+}
+
 const Links = () => {
     const [open, setOpen] = useState(false);
 
@@ -53,13 +57,15 @@ const Links = () => {
             </div>
             <button onClick={() => setOpen((prev) => !prev)}>Menu</button>
             {
-                open && <div className={styles.mobileLinks}>
+                open && (
+                    <div className={styles.mobileLinks}>
                     {
                         links.map(link => (
                             <NavLink item={link} key={link.title} />
                         ))
                     }
                     </div>
+                )
             }
         </div>
     );
