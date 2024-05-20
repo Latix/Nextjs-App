@@ -1,7 +1,11 @@
 import Image from "next/image";
 import styles from "./about.module.css";
 
-export const metadata = {
+interface Metas {
+  title: string;
+  description: string;
+}
+export const metadata: Metas = {
   title: "About Page",
   description: "About description",
 };
